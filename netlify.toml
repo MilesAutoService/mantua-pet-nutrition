@@ -1,0 +1,18 @@
+# Netlify config for the Mantua Pet Nutrition content site.
+# Static HTML — no build step. Publish directory is this folder.
+
+[build]
+  publish = "."
+  command = ""
+
+# Pretty URLs: serve /path and /path/ interchangeably, no trailing-slash surprises.
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
