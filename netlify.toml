@@ -12,6 +12,13 @@
   status = 301
   force = true
 
+# Old consult slug -> new Holistic Pet Food Expert slug
+[[redirects]]
+  from = "/certified-pet-dietitian/*"
+  to = "/holistic-pet-food-expert/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/images/*"
   [headers.values]
