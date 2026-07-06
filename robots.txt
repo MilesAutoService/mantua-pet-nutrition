@@ -10,3 +10,4 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://mantuapetnutrition.com/sitemap.xml
+# propagation-test-marker-xyz
