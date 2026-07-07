@@ -32,7 +32,16 @@ a{color:var(--green)}
 .nav .brand{font-weight:700;letter-spacing:.3px}
 .nav .brand span{opacity:.8;font-weight:400}
 .nav a{color:#fff;text-decoration:none;font-size:.92rem;opacity:.9;margin-left:18px}
-.hero{background:var(--sand);padding:54px 24px;border-bottom:1px solid var(--line)}
+.hero{position:fixed;inset:0;z-index:0;height:100vh;height:100svh;overflow:hidden;background:var(--green-dk)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,25,18,.78) 0%,rgba(10,25,18,.35) 30%,rgba(10,25,18,0) 55%,rgba(10,25,18,.3) 100%)}
+.hero-head{position:absolute;top:0;left:0;right:0;z-index:2;padding:92px 24px 0;text-align:center}
+.hero-head .kicker{color:#f0d59a}
+.hero-head h1{color:#fff;font-size:clamp(2.1rem,5.5vw,3.5rem);max-width:20ch;margin:0 auto;text-shadow:0 3px 22px rgba(0,0,0,.5)}
+.hero-sub{color:#f1eee4;font-size:1.05rem;margin:14px auto 0;max-width:46ch;text-shadow:0 2px 12px rgba(0,0,0,.55)}
+.scroll-cue{position:absolute;bottom:26px;left:50%;z-index:2;color:#fff;font-size:1.7rem;line-height:1;opacity:.9;text-shadow:0 2px 10px rgba(0,0,0,.5);animation:cueBob 2s ease-in-out infinite}
+@keyframes cueBob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,10px)}}
+.over{position:relative;z-index:2;margin-top:100vh;margin-top:100svh;background:#fff;border-radius:26px 26px 0 0;box-shadow:0 -18px 48px rgba(0,0,0,.35)}
+.over .content{padding-top:52px}
 .wrap{max-width:760px;margin:0 auto}
 .kicker{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:var(--gold);font-weight:700;margin:0 0 10px}
 h1{font-size:2.1rem;line-height:1.2;margin:0 0 6px;color:var(--green-dk)}
@@ -49,7 +58,7 @@ h2{color:var(--green-dk);font-size:1.4rem;margin:36px 0 12px}
 .nap a{color:#fff}
 .related{font-size:.9rem;color:var(--muted);margin-top:26px}
 .note{background:#fff8e8;border:1px solid #ecd9a6;border-radius:8px;padding:12px 16px;font-size:.82rem;color:#7a5e1d;margin:24px 0}
-.hero-img{width:100%;height:auto;margin:24px 0 0;display:block;border-radius:12px;box-shadow:0 10px 28px rgba(0,0,0,.12)}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 figure{margin:0}
 figure img{width:100%;height:auto;border-radius:10px;display:block;box-shadow:0 6px 18px rgba(0,0,0,.08)}
 figcaption{font-size:.82rem;color:var(--muted);margin-top:8px;line-height:1.45}
@@ -82,18 +91,19 @@ figcaption{font-size:.82rem;color:var(--muted);margin-top:8px;line-height:1.45}
 </nav>
 
 <header class="hero">
-  <div class="wrap">
+  <video class="hero-img" autoplay muted loop playsinline preload="metadata" poster="/images/open-farm-hero-poster.jpg" aria-label="Scanning the QR code on an Open Farm bag reveals the farm the ingredients came from">
+    <source src="/images/open-farm-hero-animation.mp4" type="video/mp4">
+    <img src="/images/open-farm-shelf-dog.jpg" alt="Open Farm dog food shelf section at Earthwise Pet Mantua, NJ">
+  </video>
+  <div class="hero-head">
     <p class="kicker">Brands We Carry · Mantua, NJ</p>
-    <h1>Buy Open Farm Pet Food in Mantua, NJ</h1>
-    <video width="1920" height="1068" class="hero-img" autoplay muted loop playsinline
-       preload="metadata" poster="/images/open-farm-hero-poster.jpg"
-       aria-label="Scanning the QR code on an Open Farm bag reveals the farm the ingredients came from">
-  <source src="/images/open-farm-hero-animation.mp4" type="video/mp4">
-  <img width="1600" height="1200" src="/images/open-farm-shelf-dog.jpg" alt="Open Farm dog food shelf section at Earthwise Pet Mantua, NJ">
-</video>
+    <h1>Trace Every Ingredient Back to the Farm</h1>
+    <p class="hero-sub">Open Farm dog &amp; cat food — on our shelves in Mantua, NJ.</p>
   </div>
+  <div class="scroll-cue" aria-hidden="true">&#9662;</div>
 </header>
 
+<div class="over">
 <main class="content">
 <div class="wrap">
 <p>If you read pet-food labels the way some people read wine labels — wanting to know where it came from and who stands behind it — Open Farm was practically made for you. It's one of the lines our more ingredient-curious neighbors ask for by name, and it's easy to see why once you know the story behind it.</p>
@@ -149,5 +159,7 @@ figcaption{font-size:.82rem;color:var(--muted);margin-top:8px;line-height:1.45}
   661 A Bridgeton Pike, Mantua, NJ 08051 · <a href="tel:+18564944290">856-494-4290</a><br>
   Mon–Sat 9 AM–8 PM · Sun 11 AM–5 PM
 </footer>
+</div>
+<!-- updated 2026-07-06: full-screen hero -->
 </body>
 </html>
