@@ -25,6 +25,24 @@
     onScroll();
   }
 
+  // Mobile hamburger menu
+  if (nav) {
+    var navLinks = nav.querySelector(':scope > div:not(.brand)');
+    if (navLinks) {
+      navLinks.classList.add('nav-links');
+      var burger = document.createElement('button');
+      burger.className = 'nav-burger';
+      burger.setAttribute('aria-label', 'Menu');
+      burger.setAttribute('aria-expanded', 'false');
+      burger.innerHTML = '&#9776;';
+      nav.insertBefore(burger, navLinks);
+      burger.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+  }
+
   // Self-drawing paw print at the top of the consult band
   var band = document.querySelector('.consult-band');
   if (band) {

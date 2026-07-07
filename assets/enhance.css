@@ -92,6 +92,16 @@ html:not(.js) .pawdraw path{stroke-dashoffset:0}
 .callbar .ph{display:inline-block;animation:ring 4s ease-in-out infinite}
 @keyframes ring{0%,88%,100%{transform:none}90%{transform:rotate(12deg)}92%{transform:rotate(-10deg)}94%{transform:rotate(8deg)}96%{transform:rotate(-6deg)}98%{transform:rotate(3deg)}}
 
+/* ---------- Mobile nav (hamburger) ---------- */
+.nav-burger{display:none}
+@media(max-width:820px){
+  .js .nav .brand span{display:none}
+  .js .nav-burger{display:inline-flex;align-items:center;background:none;border:0;color:#fff;font-size:1.5rem;line-height:1;padding:2px 8px;cursor:pointer}
+  .js .nav .nav-links{display:none;flex-basis:100%;flex-direction:column;padding:4px 0 6px}
+  .js .nav.open .nav-links{display:flex}
+  .js .nav .nav-links a{margin:0;padding:11px 2px;font-size:1rem;border-top:1px solid rgba(255,255,255,.16)}
+}
+
 /* ---------- Reduced motion ---------- */
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
