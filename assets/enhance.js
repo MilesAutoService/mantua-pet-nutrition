@@ -2,6 +2,13 @@
 (function () {
   document.documentElement.classList.add('js');
 
+  // Portrait hero poster on phones (the portrait video source is chosen natively via <source media>)
+  if (window.matchMedia && matchMedia('(max-width: 820px)').matches) {
+    document.querySelectorAll('video.hero-img[data-poster-portrait]').forEach(function (v) {
+      v.poster = v.getAttribute('data-poster-portrait');
+    });
+  }
+
   // Hero slow zoom trigger
   window.addEventListener('load', function () {
     var hero = document.querySelector('.hero');

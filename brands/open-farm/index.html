@@ -92,8 +92,9 @@ figcaption{font-size:.82rem;color:var(--muted);margin-top:8px;line-height:1.45}
 </nav>
 
 <header class="hero">
-  <video class="hero-img" autoplay muted loop playsinline preload="metadata" poster="/images/open-farm-hero-poster.jpg" aria-label="Scanning the QR code on an Open Farm bag reveals the farm the ingredients came from">
-    <source src="/images/open-farm-hero-animation.mp4" type="video/mp4">
+  <video class="hero-img" autoplay muted loop playsinline preload="metadata" poster="/images/open-farm-hero-poster.jpg" data-poster-portrait="/images/open-farm-hero-poster-portrait.jpg" aria-label="Scanning the QR code on an Open Farm bag reveals the farm the ingredients came from">
+    <source src="/images/open-farm-hero-animation.mp4" type="video/mp4" media="(min-width: 821px)">
+    <source src="/images/open-farm-hero-animation-portrait.mp4" type="video/mp4">
     <img src="/images/open-farm-shelf-dog.jpg" alt="Open Farm dog food shelf section at Earthwise Pet Mantua, NJ">
   </video>
   <div class="hero-head">

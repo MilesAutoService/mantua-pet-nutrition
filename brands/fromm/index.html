@@ -92,8 +92,9 @@ figcaption{font-size:.82rem;color:var(--muted);margin-top:8px;line-height:1.45}
 </nav>
 
 <header class="hero">
-  <video class="hero-img" autoplay muted loop playsinline preload="metadata" poster="/images/fromm-hero-poster.jpg" aria-label="A dog and cat seated at an elegant banquet as a French chef reveals platters of Fromm's many proteins, with Fromm Four-Star bags displayed behind">
-    <source src="/images/fromm-hero-animation.mp4" type="video/mp4">
+  <video class="hero-img" autoplay muted loop playsinline preload="metadata" poster="/images/fromm-hero-poster.jpg" data-poster-portrait="/images/fromm-hero-poster-portrait.jpg" aria-label="A dog and cat seated at an elegant banquet as a French chef reveals platters of Fromm's many proteins, with Fromm Four-Star bags displayed behind">
+    <source src="/images/fromm-hero-animation.mp4" type="video/mp4" media="(min-width: 821px)">
+    <source src="/images/fromm-hero-animation-portrait.mp4" type="video/mp4">
     <img src="/images/fromm-life-stage-banner.jpg" alt="Fromm dog food life-stage lineup at Earthwise Pet Mantua, NJ">
   </video>
   <div class="hero-head">

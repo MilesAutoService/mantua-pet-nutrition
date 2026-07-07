@@ -93,8 +93,9 @@ figcaption{font-size:.82rem;color:var(--muted);margin-top:8px;line-height:1.45}
 </nav>
 
 <header class="hero">
-  <video class="hero-img" autoplay muted loop playsinline preload="metadata" poster="/images/raw-freeze-dried-hero-poster.jpg" aria-label="Frozen raw dog food and freeze-dried raw side by side on a kitchen counter; warm water rehydrates the freeze-dried nuggets into a fresh meal">
-    <source src="/images/raw-freeze-dried-hero-animation.mp4" type="video/mp4">
+  <video class="hero-img" autoplay muted loop playsinline preload="metadata" poster="/images/raw-freeze-dried-hero-poster.jpg" data-poster-portrait="/images/raw-freeze-dried-hero-poster-portrait.jpg" aria-label="Frozen raw dog food and freeze-dried raw side by side on a kitchen counter; warm water rehydrates the freeze-dried nuggets into a fresh meal">
+    <source src="/images/raw-freeze-dried-hero-animation.mp4" type="video/mp4" media="(min-width: 821px)">
+    <source src="/images/raw-freeze-dried-hero-animation-portrait.mp4" type="video/mp4">
     <img src="/images/freeze-dried-raw-topper.jpg" alt="Freeze-dried raw dog food, an easy topper to add over kibble">
   </video>
   <div class="hero-head">
