@@ -90,7 +90,7 @@
   bar.className = 'callbar';
   bar.innerHTML =
     '<a class="call" href="tel:+18564944290"><span class="ph">📞</span> Call 856-494-4290</a>' +
-    '<a class="consult" href="/holistic-pet-food-expert/">Free Consult</a>';
+    '<a class="consult" href="/certified-pet-dietitian/">Free Consult</a>';
   document.body.appendChild(bar);
   requestAnimationFrame(function () {
     requestAnimationFrame(function () { bar.classList.add('show'); });

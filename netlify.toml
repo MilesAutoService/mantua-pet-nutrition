@@ -12,10 +12,10 @@
   status = 301
   force = true
 
-# Old consult slug -> new Holistic Pet Food Expert slug
+# Old consult slug -> new Certified Pet Dietitian slug
 [[redirects]]
-  from = "/certified-pet-dietitian/*"
-  to = "/holistic-pet-food-expert/:splat"
+  from = "/holistic-pet-food-expert/*"
+  to = "/certified-pet-dietitian/:splat"
   status = 301
   force = true
 
